@@ -3,11 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <title>Principal</title>
-    <img id="imagen" src="">
-    <button>Buscar imagen</button>
-    <button>Aplicar filtro</button>
+    <script src="../scripts/filtros.js"></script>
+    <script src="../libreria/node_modules/lena.js/dist/browser.js"></script>
 </head>
 <body>
-    
+
+    <img id="original" src="../lenna.png" />
+
+    <canvas id="canvas"></canvas>
+
+    <form>
+        
+        <input type="checkbox" id="grayScale" value="grayScale">
+        <label for="grayScale">Escala de grises</label>
+
+        <input type="checkbox" id="sepia" value="sepia">
+        <label for="sepia">Sepia</label>
+
+        <input type="checkbox" id="invert" value="invert">
+        <label for="invert">Invertido</label>
+
+        <input type="checkbox" id="saturation" value="saturation">
+        <label for="saturation">Saturacion</label>
+
+        <input type="checkbox" id="red" value="red">
+        <label for="red">Rojo</label>
+
+        <input type="checkbox" id="green" value="green">
+        <label for="green">Verde</label>
+
+        <input type="checkbox" id="blue" value="blue">
+        <label for="blue">Azul</label>
+
+        <input type="checkbox" id="mirror" value="mirror">
+        <label for="mirror">Espejo</label>
+
+        <input type="checkbox" id="sharpen" value="sharpen">
+        <label for="sharpen">Sharpen</label>
+
+        <input type="checkbox" id="sobelVertical" value="sobelVertical">
+        <label for="sobelVertical">Sobel Y</label>
+
+        <input type="checkbox" id="sobelHorizontal" value="sobelHorizontal">
+        <label for="sobelHorizontal">Sobel X</label>
+
+        <input type="checkbox" id="highpass" value="highpass">
+        <label for="highpass">Highpass</label>
+
+        <input type="checkbox" id="laplacian" value="laplacian">
+        <label for="laplacian">Laplacian</label>
+
+        <input type="checkbox" id="gaussian" value="gaussian">
+        <label for="gaussian">Gaussiano</label>
+
+        <input type="checkbox" id="canny" value="canny">
+        <label for="canny">Canny</label>
+
+        <input type="button" value="Aplicar" onclick="aplicarFiltros()">
+
+    </form>
 </body>
 </html>
