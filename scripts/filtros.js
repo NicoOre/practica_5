@@ -4,7 +4,7 @@ var filtro
 var imagenOriginal
 var imagenFiltrada
 
-var url = "https://picsum.photos/400/400"
+var url = "https://picsum.photos/200/200"
 var name = 'imagen.jpg'
 
 function getImage() {
