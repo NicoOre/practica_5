@@ -4,7 +4,7 @@ var filtro
 var imagenOriginal
 var imagenFiltrada
 
-var url = "https://picsum.photos/200/300"
+var url = "https://picsum.photos/400/400"
 var name = 'imagen.jpg'
 
 function getImage() {
@@ -29,9 +29,6 @@ function aplicarFiltros() {
     
     imagenFiltrada = document.getElementById('canvas')
     imagenOriginal = document.getElementById('original')
-
-    console.log(imagenOriginal)
-    console.log(document.getElementById('hola'))
     
     filtro1 = LenaJS["mirror"]
     LenaJS.filterImage(imagenFiltrada, filtro1, imagenOriginal)
