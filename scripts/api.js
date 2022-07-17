@@ -28,6 +28,8 @@ function filtrar() {
         document.getElementById('ram').innerHTML = data.minimum_system_requirements.memory
         document.getElementById('graficos').innerHTML = data.minimum_system_requirements.graphics
         document.getElementById('almacenamiento').innerHTML = data.minimum_system_requirements.storage
+
+        document.getElementById('cuerpo').style.backgroundImage = data.thumbnail
     }
 
     realizarPeticion()

@@ -1,84 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <script src="../scripts/api.js"></script>
-    <title>API</title>
+  <meta charset="UTF-8">
+  <script src="../scripts/api.js"></script>
+  <link rel="stylesheet" type="text/css" href="../estilos/estilo2.css" media="screen">
+  <title>API</title>
 </head>
+
 <body>
-
-    <form>
+  <header>
+      <p>
+        FreeToGame
+      </p>
+      <form>
         <input type="text" id="idJuego" value="" placeholder="Ingrese una ID">
-        <input type="button" value="Aceptar" onclick="comprobar()">
-    </form>
+        <input type="button" value="Buscar" onclick="comprobar()">
 
+      </form>
+  </header>
+
+  <div>
     <style type="text/css">
-        .tg  {border-collapse:collapse;border-spacing:0;}
-        .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-          overflow:hidden;padding:10px 5px;word-break:normal;}
-        .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-          font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-        .tg .tg-cly1{text-align:left;vertical-align:middle}
-        .tg .tg-wa1i{font-weight:bold;text-align:center;vertical-align:middle}
-        .tg .tg-uzvj{border-color:inherit;font-weight:bold;text-align:center;vertical-align:middle}
-        .tg .tg-0lax{text-align:left;vertical-align:top}
-        </style>
-        <table class="tg">
-        <thead>
-          <tr>
-            <th class="tg-uzvj" rowspan="7">Juego</th>
-            <th class="tg-cly1">Thumbnail</th>
-            <th class="tg-0lax" id="thumbnail"><img src="" id="imagen"></th>
-          </tr>
-          <tr>
-            <th class="tg-cly1">Titulo</th>
-            <th class="tg-0lax" id="titulo"></th>
-          </tr>
-          <tr>
-            <th class="tg-cly1">Descripcion</th>
-            <th class="tg-0lax" id="descripcion"></th>
-          </tr>
-          <tr>
-            <th class="tg-cly1">Genero</th>
-            <th class="tg-0lax" id="genero"></th>
-          </tr>
-          <tr>
-            <th class="tg-cly1">Editor</th>
-            <th class="tg-0lax" id="editor"></th>
-          </tr>
-          <tr>
-            <th class="tg-cly1">Desarrollador</th>
-            <th class="tg-0lax" id="desarrollador"></th>
-          </tr>
-          <tr>
-            <th class="tg-cly1">Fecha de Lanzamiento</th>
-            <th class="tg-0lax" id="fecha"></th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="tg-wa1i" rowspan="5">Requerimientos</td>
-            <td class="tg-cly1">Sistema operativo</td>
-            <td class="tg-0lax" id="so"></td>
-          </tr>
-          <tr>
-            <td class="tg-cly1">Procesador</td>
-            <td class="tg-0lax" id="procesador"></td>
-          </tr>
-          <tr>
-            <td class="tg-cly1">Ram</td>
-            <td class="tg-0lax" id="ram"></td>
-          </tr>
-          <tr>
-            <td class="tg-cly1">Graficos</td>
-            <td class="tg-0lax"id="graficos"></td>
-          </tr>
-          <tr>
-            <td class="tg-cly1">Almacenamiento</td>
-            <td class="tg-0lax" id="almacenamiento"></td>
-          </tr>
-        </tbody>
-        </table>
+      .tg {
+        border-collapse: collapse;
+        border-spacing: 0;
+      }
+  
+      .tg td {
+        border-color: black;
+        border-style: solid;
+        border-width: 1px;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        overflow: hidden;
+        padding: 10px 5px;
+        word-break: normal;
+      }
+  
+      .tg th {
+        border-color: black;
+        border-style: solid;
+        border-width: 1px;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        font-weight: normal;
+        overflow: hidden;
+        padding: 10px 5px;
+        word-break: normal;
+      }
+  
+      .tg .tg-cly1 {
+        text-align: left;
+        vertical-align: middle
+      }
+  
+      .tg .tg-wa1i {
+        font-weight: bold;
+        text-align: center;
+        vertical-align: middle
+      }
+  
+      .tg .tg-uzvj {
+        border-color: inherit;
+        font-weight: bold;
+        text-align: center;
+        vertical-align: middle
+      }
+  
+      .tg .tg-0lax {
+        text-align: left;
+        vertical-align: top
+      }
+    </style>
+    <table class="tg">
+      <thead>
+        <tr>
+          <th class="tg-uzvj" id="juego" rowspan="7">Juego</th>
+          <th class="tg-cly1">Thumbnail</th>
+          <th class="tg-0lax" id="thumbnail"><img src="" id="imagen"></th>
+        </tr>
+        <tr>
+          <th class="tg-cly1">Titulo</th>
+          <th class="tg-0lax" id="titulo"></th>
+        </tr>
+        <tr>
+          <th class="tg-cly1">Descripcion</th>
+          <th class="tg-0lax" id="descripcion"></th>
+        </tr>
+        <tr>
+          <th class="tg-cly1">Genero</th>
+          <th class="tg-0lax" id="genero"></th>
+        </tr>
+        <tr>
+          <th class="tg-cly1">Editor</th>
+          <th class="tg-0lax" id="editor"></th>
+        </tr>
+        <tr>
+          <th class="tg-cly1">Desarrollador</th>
+          <th class="tg-0lax" id="desarrollador"></th>
+        </tr>
+        <tr>
+          <th class="tg-cly1">Fecha de Lanzamiento</th>
+          <th class="tg-0lax" id="fecha"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="tg-wa1i" rowspan="5" id="requerimientos">Requerimientos</td>
+          <td class="tg-cly1">Sistema operativo</td>
+          <td class="tg-0lax" id="so"></td>
+        </tr>
+        <tr>
+          <td class="tg-cly1">Procesador</td>
+          <td class="tg-0lax" id="procesador"></td>
+        </tr>
+        <tr>
+          <td class="tg-cly1">Ram</td>
+          <td class="tg-0lax" id="ram"></td>
+        </tr>
+        <tr>
+          <td class="tg-cly1">Graficos</td>
+          <td class="tg-0lax" id="graficos"></td>
+        </tr>
+        <tr>
+          <td class="tg-cly1">Almacenamiento</td>
+          <td class="tg-0lax" id="almacenamiento"></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
 </body>
+
 </html>
