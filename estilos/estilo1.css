@@ -1,0 +1,66 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color: #b6ffff;
+}
+
+#fondoImg{
+    border-radius: 20px;
+    background-color: #7cdaf9;
+    width: 40%;
+    margin: 0% auto;
+}
+
+#imagenes{
+    margin: 2% 0;
+}
+
+#imagenes, #botones{
+    text-align: center;
+}
+
+img, canvas{
+    margin: 2%;
+    padding: 1%;
+    background-color: #0cb7f2;
+    border-radius: 10px;
+}
+
+button{
+    width: 15%;
+    height: 30px;
+    margin: 2%;
+    border-radius: 28px;
+    border-width: 1px;
+    color: white;
+    background-color: #80c8bc;
+}
+
+button:hover{
+    background-color: #9bdbd1;
+}
+
+button:active{
+    background-color: #5a8b83;
+}
+
+#opciones{
+    margin: 5% 2%;
+    text-align: center;
+}
+
+#opciones, form div{
+    float: left;
+}
+
+.cajas{
+    width: 17%;
+    margin: 0 8%;
+    margin-bottom: 1%;
+    border-radius: 20px;
+    background-color: #80c8bc;
+}
+
+

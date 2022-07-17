@@ -3,67 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <title>Principal</title>
+    <link rel="stylesheet" type="text/css" href="../estilos/estilo1.css" media="screen">
     <script src="../scripts/filtros.js"></script>
     <script src="../libreria/node_modules/lena.js/dist/browser.js"></script>
 </head>
 <body>
 
-    <img id="original" src="../imagenes/imagen.jpg">
-
-
-    <canvas id="canvas"></canvas>
-
-    <button onclick="getImage()">Obtener Imagen</button>
+    <div id="imagenes">
+        <div id="fondoImg">
+            <img id="original" src="../imagenes/imagen.jpg">
+            <canvas id="canvas" width="200" height="200"></canvas>
+        </div>
+    </div>
     
-    <form>
-        
-        <input type="checkbox" id="grayScale" value="grayScale">
-        <label for="grayScale">Escala de grises</label>
+    <div id="botones">
+        <button onclick="getImage()">Obtener Imagen</button>
+        <button onclick="aplicarFiltros()">Aplicar</button>
+    </div>
 
-        <input type="checkbox" id="sepia" value="sepia">
-        <label for="sepia">Sepia</label>
+    <div id="opciones">
+        <form>
+            <div class="cajas">
+                <input type="checkbox" id="grayScale" value="grayScale">
+                <label for="grayScale">Escala de grises</label>
+            </div>
 
-        <input type="checkbox" id="invert" value="invert">
-        <label for="invert">Invertido</label>
+            <div class="cajas">
+                <input type="checkbox" id="sepia" value="sepia">
+                <label for="sepia">Sepia</label>
+            </div>
 
-        <input type="checkbox" id="saturation" value="saturation">
-        <label for="saturation">Saturacion</label>
+            <div class="cajas">
+                <input type="checkbox" id="invert" value="invert">
+                <label for="invert">Invertido</label>
+            </div>
 
-        <input type="checkbox" id="red" value="red">
-        <label for="red">Rojo</label>
+            <div class="cajas">
+                <input type="checkbox" id="saturation" value="saturation">
+                <label for="saturation">Saturacion</label>
+            </div>
 
-        <input type="checkbox" id="green" value="green">
-        <label for="green">Verde</label>
+            <div class="cajas">
+                <input type="checkbox" id="red" value="red">
+                <label for="red">Rojo</label>
+            </div>
 
-        <input type="checkbox" id="blue" value="blue">
-        <label for="blue">Azul</label>
+            <div class="cajas">
+                <input type="checkbox" id="green" value="green">
+                <label for="green">Verde</label>
+            </div>
 
-        <input type="checkbox" id="mirror" value="mirror">
-        <label for="mirror">Espejo</label>
+            <div class="cajas">
+                <input type="checkbox" id="blue" value="blue">
+                <label for="blue">Azul</label>
+            </div>
 
-        <input type="checkbox" id="sharpen" value="sharpen">
-        <label for="sharpen">Sharpen</label>
+            <div class="cajas">
+                <input type="checkbox" id="mirror" value="mirror">
+                <label for="mirror">Espejo</label>
+            </div>
 
-        <input type="checkbox" id="sobelVertical" value="sobelVertical">
-        <label for="sobelVertical">Sobel Y</label>
+            <div class="cajas">
+                <input type="checkbox" id="sharpen" value="sharpen">
+                <label for="sharpen">Sharpen</label>
+            </div>
 
-        <input type="checkbox" id="sobelHorizontal" value="sobelHorizontal">
-        <label for="sobelHorizontal">Sobel X</label>
+            <div class="cajas">
+                <input type="checkbox" id="sobelVertical" value="sobelVertical">
+                <label for="sobelVertical">Sobel Y</label>
+            </div>
 
-        <input type="checkbox" id="highpass" value="highpass">
-        <label for="highpass">Highpass</label>
+            <div class="cajas">
+                <input type="checkbox" id="sobelHorizontal" value="sobelHorizontal">
+                <label for="sobelHorizontal">Sobel X</label>
+            </div>
 
-        <input type="checkbox" id="laplacian" value="laplacian">
-        <label for="laplacian">Laplacian</label>
+            <div class="cajas">
+                <input type="checkbox" id="highpass" value="highpass">
+                <label for="highpass">Highpass</label>
+            </div>
 
-        <input type="checkbox" id="gaussian" value="gaussian">
-        <label for="gaussian">Gaussiano</label>
+            <div class="cajas">
+                <input type="checkbox" id="laplacian" value="laplacian">
+                <label for="laplacian">Laplacian</label>
+            </div>
 
-        <input type="checkbox" id="canny" value="canny">
-        <label for="canny">Canny</label>
+            <div class="cajas">
+                <input type="checkbox" id="gaussian" value="gaussian">
+                <label for="gaussian">Gaussiano</label>
+            </div>
 
-        <input type="button" value="Aplicar" onclick="aplicarFiltros()">
-
-    </form>
+            <div class="cajas">
+                <input type="checkbox" id="canny" value="canny">
+                <label for="canny">Canny</label>
+            </div>
+        </form>
+    </div>
+   
 </body>
 </html>
