@@ -1,14 +1,21 @@
-filtrar('523')
+function comprobar() {
+    if (document.getElementById('idJuego').value > 0 && document.getElementById('idJuego').value < 524) {
+        filtrar()
+    } else {
+        alert('Ingrese una id valida')
+    }
+}
 
-function filtrar(id) {
+function filtrar() {
     
+    var id = document.getElementById('idJuego').value
     var url = 'https://www.freetogame.com/api/game?id=' + id
 
     const realizarPeticion = async () => {
         const res = await fetch(url)
         const data = await res.json()
         
-        document.getElementById('imagen').src = 'https:\/\/www.freetogame.com\/g\/523\/thumbnail.jpg'
+        document.getElementById('imagen').src = data.thumbnail
         document.getElementById('titulo').innerHTML = data.title
         document.getElementById('descripcion').innerHTML = data.description
         document.getElementById('genero').innerHTML = data.genre
@@ -25,4 +32,3 @@ function filtrar(id) {
 
     realizarPeticion()
 }
-
