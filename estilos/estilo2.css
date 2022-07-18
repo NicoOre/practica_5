@@ -2,30 +2,35 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+body{
+    background-color: #484b57;
+}
+
 header{
     width: 100%;
+
     float: left;
     margin: 0%;
     padding: 0%;
     background-color: black;
-    height: 100px;
+    height: 120px;
     margin-bottom: 1%;
     text-align: center;
 }
 
 p, form{
     float: left;
+    width: 100%;
 }
 
 p{
     color: white;
     font-size: 30px;
     text-align: center;
-    width: 80%;
 }
 
 form{
-    margin-top: 5%;
+    margin-left: 80%;
     width: 20%;
 }
 
@@ -38,6 +43,23 @@ input{
 }
 
 table{
+    margin: 0 auto;
+    width: 50%;
     color: white;
-    background-color: #2b3336;
+}
+
+#thumbnail{
+    text-align: center;
+}
+
+#juego, #requerimientos, #thumbnail{
+    background-color: #2E3339;
+}
+
+#tituloInf,#generoInf,#descripcionInf,#editorInf,#desarrolladorInf,#fechaInf,#soInf,#procesadorInf,#ramInf,#graficosInf,#almacenamientoInf{
+    background-color: #263049;
+}
+
+#titulo,#genero,#descripcion,#editor,#desarrollador,#fecha,#so,#procesador,#ram,#graficos,#almacenamiento{
+    background-color: #3f4d70;
 }

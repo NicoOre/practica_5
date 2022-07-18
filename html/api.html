@@ -22,114 +22,75 @@
 
   <div>
     <style type="text/css">
-      .tg {
-        border-collapse: collapse;
-        border-spacing: 0;
-      }
-  
-      .tg td {
-        border-color: black;
-        border-style: solid;
-        border-width: 1px;
-        font-family: Arial, sans-serif;
-        font-size: 14px;
-        overflow: hidden;
-        padding: 10px 5px;
-        word-break: normal;
-      }
-  
-      .tg th {
-        border-color: black;
-        border-style: solid;
-        border-width: 1px;
-        font-family: Arial, sans-serif;
-        font-size: 14px;
-        font-weight: normal;
-        overflow: hidden;
-        padding: 10px 5px;
-        word-break: normal;
-      }
-  
-      .tg .tg-cly1 {
-        text-align: left;
-        vertical-align: middle
-      }
-  
-      .tg .tg-wa1i {
-        font-weight: bold;
-        text-align: center;
-        vertical-align: middle
-      }
-  
-      .tg .tg-uzvj {
-        border-color: inherit;
-        font-weight: bold;
-        text-align: center;
-        vertical-align: middle
-      }
-  
-      .tg .tg-0lax {
-        text-align: left;
-        vertical-align: top
-      }
-    </style>
-    <table class="tg">
+      .tg  {border-collapse:collapse;border-spacing:0;}
+      .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+        overflow:hidden;padding:10px 5px;word-break:normal;}
+      .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+        font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+      .tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
+      .tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+      </style>
+      <table class="tg">
       <thead>
         <tr>
-          <th class="tg-uzvj" id="juego" rowspan="7">Juego</th>
-          <th class="tg-cly1">Thumbnail</th>
-          <th class="tg-0lax" id="thumbnail"><img src="" id="imagen"></th>
-        </tr>
-        <tr>
-          <th class="tg-cly1">Titulo</th>
-          <th class="tg-0lax" id="titulo"></th>
-        </tr>
-        <tr>
-          <th class="tg-cly1">Descripcion</th>
-          <th class="tg-0lax" id="descripcion"></th>
-        </tr>
-        <tr>
-          <th class="tg-cly1">Genero</th>
-          <th class="tg-0lax" id="genero"></th>
-        </tr>
-        <tr>
-          <th class="tg-cly1">Editor</th>
-          <th class="tg-0lax" id="editor"></th>
-        </tr>
-        <tr>
-          <th class="tg-cly1">Desarrollador</th>
-          <th class="tg-0lax" id="desarrollador"></th>
-        </tr>
-        <tr>
-          <th class="tg-cly1">Fecha de Lanzamiento</th>
-          <th class="tg-0lax" id="fecha"></th>
+          <th class="tg-0pky" colspan="2" id="thumbnail"><img src="" id="imagen"></th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td class="tg-wa1i" rowspan="5" id="requerimientos">Requerimientos</td>
-          <td class="tg-cly1">Sistema operativo</td>
-          <td class="tg-0lax" id="so"></td>
+          <td class="tg-c3ow" colspan="2" id="juego">Juego</td>
         </tr>
         <tr>
-          <td class="tg-cly1">Procesador</td>
-          <td class="tg-0lax" id="procesador"></td>
+          <td class="tg-0pky" id="tituloInf">Titulo</td>
+          <td class="tg-0pky" id="titulo"></td>
         </tr>
         <tr>
-          <td class="tg-cly1">Ram</td>
-          <td class="tg-0lax" id="ram"></td>
+          <td class="tg-0pky" id="descripcionInf">Descripcion</td>
+          <td class="tg-0pky" id="descripcion"></td>
         </tr>
         <tr>
-          <td class="tg-cly1">Graficos</td>
-          <td class="tg-0lax" id="graficos"></td>
+          <td class="tg-0pky" id="generoInf">Genero</td>
+          <td class="tg-0pky" id="genero"></td>
         </tr>
         <tr>
-          <td class="tg-cly1">Almacenamiento</td>
-          <td class="tg-0lax" id="almacenamiento"></td>
+          <td class="tg-0pky" id="editorInf">Editora/Distribuidora</td>
+          <td class="tg-0pky" id="editor"></td>
+        </tr>
+        <tr>
+          <td class="tg-0pky" id="desarrolladorInf">Desarrollador</td>
+          <td class="tg-0pky" id="desarrollador"></td>
+        </tr>
+        <tr>
+          <td class="tg-0pky" id="fechaInf">Fecha de lanzamiento</td>
+          <td class="tg-0pky" id="fecha"></td>
+        </tr>
+        <tr>
+          <td class="tg-c3ow" colspan="2" id="requerimientos">Requerimientos</td>
+        </tr>
+        <tr>
+          <td class="tg-0pky" id="soInf">Sistema operativo</td>
+          <td class="tg-0pky" id="so"></td>
+        </tr>
+        <tr>
+          <td class="tg-0pky" id="procesadorInf">Procesador</td>
+          <td class="tg-0pky" id="procesador"></td>
+        </tr>
+        <tr>
+          <td class="tg-0pky" id="ramInf">Ram</td>
+          <td class="tg-0pky" id="ram"></td>
+        </tr>
+        <tr>
+          <td class="tg-0pky" id="graficosInf">Graficos</td>
+          <td class="tg-0pky" id="graficos"></td>
+        </tr>
+        <tr>
+          <td class="tg-0pky" id="almacenamientoInf">Almacenamiento</td>
+          <td class="tg-0pky" id="almacenamiento"></td>
         </tr>
       </tbody>
-    </table>
+      </table>
   </div>
+
 
 </body>
 
